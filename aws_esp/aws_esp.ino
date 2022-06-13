@@ -165,7 +165,7 @@ void msgReceived(char* topic, byte* payload, unsigned int length) {
     Serial.println(msgString);
     JSONVar myObject = JSON.parse(msgString);
 
-  if(String(topic) == "$aws/things/ted/shadow/get/accepted"){
+  if(String(topic) == "$aws/things/zen/shadow/get/accepted"){
   
       String redstr= (const char*) myObject["state"]["desired"]["red"];
       String greenstr= (const char*) myObject["state"]["desired"]["green"];
